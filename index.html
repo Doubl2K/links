@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>영상 속 제품 링크</title>
+<meta name="description" content="영상에서 말한 번호를 찾아 누르면 제품 페이지로 바로 갑니다.">
+<style>
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1c1b19;--sub:#6b6862;--line:#e4e1da;--accent:#1f5eff;--tile:#ebe8e1;--coupang:#d8232a;--naver:#03a94d}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--card:#1e1e1c;--ink:#f1efea;--sub:#a29e96;--line:#2e2d2a;--accent:#8fb0ff;--tile:#2a2927;--coupang:#e5484d;--naver:#1fbf63}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-text-size-adjust:100%}
+main{max-width:560px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:22px;margin:0 0 4px;letter-spacing:-.02em}
+.intro{margin:0 0 14px;color:var(--sub);font-size:14px}
+.notice{margin:0 0 16px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;color:var(--sub);font-size:12px;line-height:1.55}
+.notice p{margin:0}.notice p+p{margin-top:4px}
+.find{position:sticky;top:0;z-index:2;padding:8px 0;background:var(--bg)}
+.find input{width:100%;height:48px;padding:0 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);font:inherit}
+.find input:focus{outline:2px solid var(--accent);outline-offset:1px}
+ul{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:10px}
+.card{display:flex;gap:12px;padding:10px;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.card:target{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+.pic{position:relative;flex:0 0 104px;height:104px}
+.pic img,.tile{display:block;width:104px;height:104px;border-radius:10px;object-fit:cover}
+.tile{display:grid;place-items:center;background:var(--tile);color:var(--sub);font-size:34px;font-weight:700}
+.no{position:absolute;left:6px;top:6px;min-width:26px;height:26px;padding:0 7px;border-radius:13px;background:var(--ink);color:var(--bg);font-size:13px;line-height:26px;text-align:center}
+.pic .tile+.no{display:none}
+.body{flex:1;min-width:0;display:flex;flex-direction:column}
+h2{margin:0;font-size:16px;line-height:1.35;letter-spacing:-.01em;overflow-wrap:anywhere}
+.video{margin:2px 0 0;color:var(--sub);font-size:13px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:10px}
+.btn{flex:1 1 120px;min-height:44px;display:grid;place-items:center;padding:0 12px;border-radius:10px;color:#fff;font-size:14px;font-weight:600;text-decoration:none}
+.btn.coupang{background:var(--coupang)}.btn.naver{background:var(--naver)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.empty{display:none;margin:24px 0;color:var(--sub);text-align:center}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main>
+<h1>영상 속 제품 링크</h1>
+<p class="intro">영상에서 말한 번호를 찾아 누르면 제품 페이지로 바로 갑니다.</p>
+<div class="notice"><p>이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p><p>이 페이지에는 네이버 쇼핑 커넥트 링크가 포함되어 있으며, 링크를 통해 구매가 발생하면 수수료를 받습니다.</p></div>
+<div class="find"><input id="q" type="search" inputmode="search" placeholder="번호 또는 제품 이름" aria-label="번호 또는 제품 이름으로 찾기" autocomplete="off"></div>
+<ul id="list">
+<li class="card" id="n4" data-no="4" data-s="4 오아 클린이워터b 구강세정기 오아 클린이워터b 1년 사용 후기"><div class="pic"><span class="tile" aria-hidden="true">4</span><b class="no">4</b></div><div class="body"><h2>오아 클린이워터B 구강세정기</h2><p class="video">영상: 오아 클린이워터B 1년 사용 후기</p><div class="btns"><a class="btn naver" href="https://naver.me/F2nC4oRl" target="_blank" rel="sponsored nofollow noopener">네이버에서 보기</a></div></div></li>
+<li class="card" id="n3" data-no="3" data-s="3 이메텍 전기요 imf-092 더블 이메텍 전기요 실사용 후기"><div class="pic"><span class="tile" aria-hidden="true">3</span><b class="no">3</b></div><div class="body"><h2>이메텍 전기요 IMF-092 더블</h2><p class="video">영상: 이메텍 전기요 실사용 후기</p><div class="btns"><a class="btn naver" href="https://naver.me/x3Hah4ph" target="_blank" rel="sponsored nofollow noopener">네이버에서 보기</a></div></div></li>
+<li class="card" id="n2" data-no="2" data-s="2 삼성 정품 폴드8 힌지 보호 케이스 폴드8 정품 힌지보호케이스"><div class="pic"><img src="img/02.jpg" alt="" width="400" height="400" loading="lazy"><b class="no">2</b></div><div class="body"><h2>삼성 정품 폴드8 힌지 보호 케이스</h2><p class="video">영상: 폴드8 정품 힌지보호케이스</p><div class="btns"><a class="btn naver" href="https://naver.me/FfsHQjqh" target="_blank" rel="sponsored nofollow noopener">네이버에서 보기</a></div></div></li>
+<li class="card" id="n1" data-no="1" data-s="1 갤럭시 z 폴드8 자급제 512gb 크림 폴드8 장단점 2주 후기"><div class="pic"><img src="img/01.jpg" alt="" width="400" height="400" loading="lazy"><b class="no">1</b></div><div class="body"><h2>갤럭시 Z 폴드8 자급제 512GB 크림</h2><p class="video">영상: 폴드8 장단점 2주 후기</p><div class="btns"><a class="btn coupang" href="https://link.coupang.com/a/itMPyUMSbI" target="_blank" rel="sponsored nofollow noopener">쿠팡에서 보기</a></div></div></li>
+</ul>
+<p class="empty" id="empty">찾는 제품이 없습니다. 번호를 다시 확인해 주세요.</p>
+</main>
+<script>
+(function(){
+  var q=document.getElementById('q'),cards=[].slice.call(document.querySelectorAll('.card')),empty=document.getElementById('empty');
+  function run(){
+    var v=q.value.trim().toLowerCase(),isNo=/^\d+$/.test(v),shown=0;
+    cards.forEach(function(c){
+      var ok=!v||(isNo?c.dataset.no===v:c.dataset.s.indexOf(v)>-1);
+      c.hidden=!ok;if(ok)shown++;
+    });
+    empty.style.display=shown?'none':'block';
+  }
+  q.addEventListener('input',run);
+  var n=new URLSearchParams(location.search).get('n');
+  if(n){q.value=n;run();}
+})();
+</script>
+</body>
+</html>
