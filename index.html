@@ -35,6 +35,8 @@ h2{margin:0;font-size:16px;line-height:1.35;letter-spacing:-.01em;overflow-wrap:
 .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .empty{display:none;margin:24px 0;color:var(--sub);text-align:center}
 [hidden]{display:none!important}
+.deal{display:inline-block;margin:0 0 4px;padding:2px 8px;border-radius:8px;background:#fff1e6;color:#b4410c;font-size:12px;font-weight:700}
+@media (prefers-color-scheme:dark){.deal{background:#3a2414;color:#ffb37a}}
 </style>
 </head>
 <body>
@@ -72,6 +74,14 @@ h2{margin:0;font-size:16px;line-height:1.35;letter-spacing:-.01em;overflow-wrap:
   q.addEventListener('input',run);
   var n=new URLSearchParams(location.search).get('n');
   if(n){q.value=n;run();}
+  // 특가 배지: GitHub Actions 가 매일 다나와 최저가로 판정해 deals.json 을 갱신한다
+  fetch('deals.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{deals:[]};}).then(function(d){
+    (d.deals||[]).forEach(function(x){
+      var c=document.getElementById('n'+x.no);if(!c)return;
+      var b=document.createElement('span');b.className='deal';b.textContent='🔥 요즘 가격 내려감';
+      var body=c.querySelector('.body');body.insertBefore(b,body.firstChild);
+    });
+  }).catch(function(){});
 })();
 </script>
 </body>
